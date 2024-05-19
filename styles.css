@@ -1,0 +1,166 @@
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  font-family: "Black Ops One", Verdana, Geneva, Tahoma, sans-serif;
+
+  /* display: grid;
+  place-content: center; */
+}
+/* .black-ops-one-regular {
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+#jugadoresForm {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4em;
+  width: 80%;
+  margin: auto;
+  padding: 10% 5%;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 8px;
+  background-image: url("./assets/fondo1.png");
+  /* background-repeat: no-repeat; */
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#jugadoresForm h1,
+#jugadoresForm span {
+  padding: 3px;
+  border-radius: 4px;
+  background-color: rgba(245, 245, 245, 0.518);
+}
+#jugadoresForm input {
+  margin: 4% 0px;
+}
+#jugadoresForm button {
+  height: 30px;
+  width: 150px;
+  border-radius: 6px;
+  background-color: rgb(247, 247, 237);
+}
+
+#contenedorJuego {
+  visibility: hidden;
+  /* height: 0px; */
+  /* height: 3000px; */
+  height: 80%;
+  padding: 150px 0px;
+  background-image: url("./assets/fondo.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.contenedorCasillas {
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* grid-gap: 20px; */
+}
+
+/* .contenedorCasillas p {
+  border: 2px solid red;
+  width: 200px;
+  height: 200px;
+} */
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.cellButton {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 130px;
+  color: #261f05;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-around;
+  align-items: center;
+  width: 120px;
+  height: 120px;
+  border: 2px solid #261f05;
+  border-radius: 6px;
+  margin: 3px;
+  cursor: pointer;
+  background-image: url("./assets/casilla.png");
+  background-position: center;
+  background-size: contain;
+  line-height: 150px;
+  text-align: center;
+  vertical-align: center;
+}
+.avisoJugador {
+  margin-bottom: 100px;
+}
+.containerButtons {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.containerButtons button {
+  font-size: 1.2em;
+  font-family: "Black Ops One", Verdana, Geneva, Tahoma, sans-serif;
+  height: 55px;
+  width: 200px;
+  margin: 1%;
+  border-radius: 7px;
+  cursor: pointer;
+  background-color: rgb(247, 247, 237);
+}
+.containerAvisos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.containerAvisos h1 {
+  font-size: 2.5em;
+  color: whitesmoke;
+}
+.containerAvisos p {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4em;
+  font-weight: 700;
+  height: 35px;
+  width: 25%;
+  text-align: center;
+  border: 2px solid #261f05;
+  border-radius: 8px;
+  padding: 2px;
+  margin: 5px;
+  background-color: rgb(247, 247, 237);
+}
+
+@media (max-width: 1600px) {
+  .containerButtons button {
+    font-size: 1em; /* Tamaño de letra más pequeño para pantallas pequeñas */
+  }
+  .containerAvisos p {
+    font-size: 1.1em;
+  }
+}
+@media (max-width: 1250px) {
+  .containerAvisos {
+    flex-direction: column;
+  }
+  .containerAvisos p {
+    font-size: 1.2em;
+    width: 400px;
+  }
+}
