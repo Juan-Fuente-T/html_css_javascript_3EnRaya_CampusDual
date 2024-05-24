@@ -56,27 +56,19 @@ function empezarPartida(jugadorUno, jugadorDos, colorJugadorUno, colorJugadorDos
         juego.style.visibility = 'visible';
         // juego.style.height = "100%";
         (new Audio('assets/open.mp3')).play();
-        console.log("DatosInicio: ", jugador1, colorJugador1, jugador2, colorJugador2);
     }
 }
 
 // function guardarJugadores(event){
 //     event.preventDefault();
-//     // console.log("Porras");
 //     jugadorUno = document.getElementById("jugador1").value;
 //     colorJugadorUno = document.getElementById("colorJugador1").value;
 //     jugadorDos = document.getElementById("jugador2").value;
 //     colorJugadorDos = document.getElementById("colorJugador2").value;
-//     console.log("Jugadores y colores: ", jugadorUno, jugadorDos, colorJugadorUno, colorJugadorDos);
 // }
 
 function manejarTurno(posicion){
     let cell = document.getElementById(`cellButton${posicion}`);
-
-    // console.log("Cell: ", document.getElementById(`cellButton${row}${numCell}`).innerHTML);
-    console.log("Cell", cell)
-    console.log("Color1", colorJugador1)
-    // console.log("NumCell", numCell);
     
     if(tablero[posicion] != 0){
         // alert("No se puede sobreescribir la jugada de otro jugador");
@@ -84,12 +76,10 @@ function manejarTurno(posicion){
     }
     // tablero[posicion] = jugadorTurno;
     // jugadorTurno = jugadorTurno == 1 ? 2 : 1;
-    console.log("Turno principio", jugadorTurno);
     if (jugadorTurno == 1) {
         cell.style.backgroundImage = "url('')";
         // cell.innerHTML = '<div>x</div>';
         // cell.style.backgroundColor = colorJugador1;
-        console.log("Color2", colorJugador2);
         cell.style.backgroundImage = "url('./assets/ovni.png')";
         tablero[posicion] = 1;
         (new Audio('assets/ficha1.mp3')).play();
@@ -101,19 +91,12 @@ function manejarTurno(posicion){
         // cell.innerHTML = "<div>o</div>";
         // cell.style.backgroundColor = colorJugador2;
         cell.style.backgroundImage = "url('./assets/nave.png')";
-        // console.log("Matriz", cellMatrix);
         tablero[posicion] = 2;
         (new Audio('assets/ficha2.mp3')).play();
         avisoJugador.innerHTML = `Es el turno de ${jugador1}`;
         jugadorTurno = 1;
     }
-    
-    // mostrarVencedor();
     comprobarVictoria();
-    // console.log("Matriz", cellMatrix);
-    // console.log("Matriz", cellArray);
-    
-    
 }
 const combinacionesGanadoras = [
     [0, 1, 2],
@@ -129,8 +112,7 @@ function comprobarVictoria(){
     let partidaTerminada = false;
     let ganador = 0;
     for(let combinacion of combinacionesGanadoras){
-        console.log("cels", tablero[combinacion[0]], tablero[combinacion[1]],tablero[combinacion[2]]);
-        if(
+         if(
             tablero[combinacion[0]] == tablero[combinacion[1]] &&  
             tablero[combinacion[1]] == tablero[combinacion[2]] &&  
             tablero[combinacion[0]] != 0
@@ -143,8 +125,6 @@ function comprobarVictoria(){
     }
     if(partidaTerminada){
         if(ganador == 1){
-        // console.log("ganador2", ganador);
-        // if(ganador === "x"){
             avisoJugador.innerHTML = `${jugador1} ha vencido`;
             jugadorTurno = 2;
             // partidaTerminada = true;
@@ -195,22 +175,6 @@ setTimeout(function (){
         reiniciarPartida();
         guardarDatos();
     }, 700);
-
-        // setTimeout(function (){
-        //         reiniciarPartida();
-        //     }, 800);
-            // for (let valorCellMatrix of cellMatrix){
-                //     if (valorCellMatrix == ""){
-                    //         return;
-                    //     }
-                    // }
-        
-    // setTimeout(function (){
-    //     reiniciarPartida();
-    //     guardarDatos();
-    // }, 1200);
-    // alert("Empate");
-    // reiniciarPartida();
 }
 
 function reiniciarContador(){   
@@ -281,7 +245,6 @@ function recuperarPartida(){
         
         avisoEmpates.innerHTML = `Empates: ${empates}`;
         avisoEmpates.style.background = `linear-gradient(to right, ${colorJugador1} 50%, ${colorJugador2} 50%)`;
-        console.log("INFO PREVIA", localStorage.getItem("INFO PREVIA"));
     }
 }
 
