@@ -34,12 +34,18 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-#jugadoresForm h1,
+#jugadoresForm h1 {
+  font-size: 2.5;
+  padding: 3px;
+  border-radius: 4px;
+  background-color: rgba(245, 245, 245, 0.518);
+}
 #jugadoresForm span {
   padding: 3px;
   border-radius: 4px;
   background-color: rgba(245, 245, 245, 0.518);
 }
+
 #nombre1,
 #nombre2 {
   margin: 4% 0px;
@@ -187,7 +193,7 @@ body {
 }
 @media (min-width: 992px) and (max-width: 1249.98px) {
   #jugadoresForm {
-    background-color: blue;
+    /* background-color: blue; */
   }
 }
 @media (max-width: 991.98px) {
@@ -201,12 +207,12 @@ body {
   }
 
   #jugadoresForm h1 {
-    display: flex;
+    font-size: 1.5em;
     flex-direction: column;
     text-align: center;
   }
   #jugadoresForm p {
-    font-size: 1.4em;
+    font-size: 1.3em;
     text-align: center;
     padding: 5px;
     border-radius: 4px;
@@ -259,16 +265,15 @@ body {
       top: 520px;
       right: 20px;
     }
+    #jugadoresForm h1 {
+      font-size: 1.2em;
+    }
   }
   @media (max-width: 479.98px) {
     #jugadoresForm img {
       display: none;
     }
-    #contenedorJuego {
-    }
-    #containrAvisos h1 {
-      font-size: 2em;
-    }
+
     #nombre1,
     #nombre2 {
       width: 200px;
