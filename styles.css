@@ -260,4 +260,22 @@ body {
       right: 20px;
     }
   }
+  @media (max-width: 479.98px) {
+    #jugadoresForm img {
+      display: none;
+    }
+    #contenedorJuego {
+    }
+    #containrAvisos h1 {
+      font-size: 2em;
+    }
+    #nombre1,
+    #nombre2 {
+      width: 200px;
+      height: 25px;
+    }
+    #jugadoresForm span {
+      width: 200px;
+    }
+  }
 }
