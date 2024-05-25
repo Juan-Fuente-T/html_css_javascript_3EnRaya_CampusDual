@@ -40,8 +40,24 @@ body {
   border-radius: 4px;
   background-color: rgba(245, 245, 245, 0.518);
 }
-#jugadoresForm input {
+#nombre1,
+#nombre2 {
   margin: 4% 0px;
+  width: 250px;
+  height: 25px;
+}
+#color1,
+#color2 {
+  margin: 4% 0px;
+  width: 80px;
+  height: 25px;
+}
+
+#jugadoresForm img {
+  width: 200px;
+  position: absolute;
+  top: 35%;
+  right: 8%;
 }
 #jugadoresForm button {
   height: 30px;
@@ -71,11 +87,6 @@ body {
   /* grid-gap: 20px; */
 }
 
-/* .contenedorCasillas p {
-  border: 2px solid red;
-  width: 200px;
-  height: 200px;
-} */
 .row {
   display: flex;
   flex-direction: row;
@@ -106,12 +117,14 @@ body {
   margin-bottom: 100px;
 }
 .containerButtons {
+  max-width: 650px;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin: auto;
 }
 .containerButtons button {
-  font-size: 1.2em;
+  font-size: 1em;
   font-family: "Black Ops One", Verdana, Geneva, Tahoma, sans-serif;
   height: 55px;
   width: 200px;
@@ -154,6 +167,10 @@ body {
   .containerAvisos p {
     font-size: 1.1em;
   }
+  /* #jugadoresForm img {
+    top: 320px;
+    right: 20px;
+  }  */
 }
 @media (max-width: 1250px) {
   .containerAvisos {
@@ -162,5 +179,85 @@ body {
   .containerAvisos p {
     font-size: 1.2em;
     width: 400px;
+  }
+  /* #jugadoresForm img {
+    top: 320px;
+    right: 70px;
+  } */
+}
+@media (min-width: 992px) and (max-width: 1249.98px) {
+  #jugadoresForm {
+    background-color: blue;
+  }
+}
+@media (max-width: 991.98px) {
+  #jugadoresForm {
+    display: flex;
+    flex-direction: column;
+  }
+  #jugadoresForm img {
+    top: 520px;
+    right: 40px;
+  }
+
+  #jugadoresForm h1 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  #jugadoresForm p {
+    font-size: 1.4em;
+    text-align: center;
+    padding: 5px;
+    border-radius: 4px;
+    background-color: rgba(245, 245, 245, 0.518);
+  }
+  #jugadoresForm span {
+    width: 280px;
+    padding: 3px;
+    border-radius: 4px;
+    background-color: rgba(245, 245, 245, 0.518);
+  }
+  #nombre1,
+  #nombre2 {
+    justify-content: flex-start;
+    text-align: start;
+    width: 250px;
+    height: 25px;
+    text-wrap: nowrap;
+    border-radius: 4px;
+  }
+  #color1,
+  #color2 {
+    width: 120px;
+    border-radius: 4px;
+  }
+  .containerAvisos h1 {
+    text-align: center;
+  }
+  .containerButtons button {
+    margin: auto;
+    font-size: 0.8em;
+    height: 40px;
+    width: 150px;
+  }
+  .player {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    text-align: start;
+  }
+
+  .containerButtons {
+    max-width: 500px;
+  }
+
+  @media (max-width: 779.98px) {
+    #jugadoresForm img {
+      width: 130px;
+      top: 520px;
+      right: 20px;
+    }
   }
 }
