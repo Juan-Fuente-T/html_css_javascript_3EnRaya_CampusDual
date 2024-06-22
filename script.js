@@ -43,9 +43,9 @@ function empezarPartida(jugadorUno, jugadorDos, colorJugadorUno, colorJugadorDos
         alert("Debe escribir ambos nombres!");
     }else{
         jugador1 = jugadorUno;
-        jugador1 = jugador1 == "Tu nombre 1"? "XR3 -22HR - T": jugador1;
+        jugador1 = jugador1 == "Tu nombre 1"? "XR7 - 29HR": jugador1;
         jugador2 = jugadorDos;
-        jugador2 = jugador2 == "Tu nombre 2"? "Space Lord": jugador2;
+        jugador2 = jugador2 == "Tu nombre 2"? "Star Lord": jugador2;
         colorJugador1 = colorJugadorUno;
         colorJugador2 = colorJugadorDos;
         let form = document.getElementById("jugadoresForm");
